@@ -1,0 +1,45 @@
+spring:
+  # JPA 설정
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        show_sql: false
+        format_sql: false
+
+  # MariaDB 설정
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://192.168.149.212:3306/gesia_prod?characterEncoding=UTF-8&serverTimezone=UTC
+    username: gesia_prod
+    password: OQXieqKt1qQAZrZ3
+    hikari:
+      connection-timeout: 5000
+      max-lifetime: 30000
+
+  # Redis
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+  # Mail
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: support@gesia.io
+    password: fuqrenblkjzfjyme
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: ture
+
+# Jwt
+jwt:
+  header: Authorization
+  secret-key: 7ZqM7IudIOunpOydvCDtlZjqs6Ag7Iu264ukIOynhOynnCDrp5vsnojrhKQg7Yq57Z6IIOyGjOqzoOq4sCE=  # "회식 매일 하고 싶다 진짜 맛있네 특히 소고기!" convert to Base64
+  access-token-validity-time: 172800000 # 2d * 24h * 60min * 60s * 1000ms
+
+server:
+  error:
+    include-stacktrace: never
