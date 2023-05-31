@@ -52,6 +52,16 @@ Among the various carbon offset projects described earlier, Gesia Chain is one p
 >
 > By clicking the NFV issuance button, NFVs are issued to the wallet connected to the carbon offset provider's account. This wallet serves as a unique identifier and storage for the carbon offset provider, > enabling the storage and management of issued NFVs. For detailed information, please to future refer user guides and documentation provided by Gesia Platform.
 
+API(provider)<br>
+cert apply: (POST) https://test-api.gesiaplatform/v1/cert/certs/{username}
+<br>
+cert update: (PATCH) https://test-api.gesiaplatform/v1/cert/certs/{username}/{id}
+<br>
+cert request: (GET) https://test-api.gesiaplatform/v1/cert/certs/{username}
+<br>
+NFV list request: (GET) https://test-api.gesiaplatform/v1/cert/certs/nfv/{id}
+<br><br><br>
+
 <p align="center">
   <img src="img/ui/ui_a.png" width="500">
 </p>
@@ -65,6 +75,14 @@ Among the various carbon offset projects described earlier, Gesia Chain is one p
 > The issued NFT is generated based on the NFV. NFVs are generated at a 1:N ratio to the actual carbon offset issued by companies issuing carbon offset certificates such as Verra and Gold Standard. This means that the quantity of NFTs issued depends on the amount of NFVs. In other words, NFTs are issued in proportion to the guaranteed amount of NFVs.
 >
 > The issued NFT has a unique identifier and is recorded on the blockchain. This allows you to track and warrant NFT ownership and transactions. In this way, carbon offsetting rights providers can leverage > NFV to issue NFTs that demonstrate environmental protection and carbon offset.
+
+API(provider)<br>
+cert request: (GET) https://test-api.gesiaplatform/v1/cert/certs/{username}
+<br>
+NFV publish apply: (POST) https://test-api.gesiaplatform/v1/cert/certs/{username}/nfv/minting/{id}
+<br>
+NFV list request: (GET) https://test-api.gesiaplatform/v1/cert/certs/nfv/{id}
+<br><br><br>
 
 <p align="center">
   <img src="img/ui/ui_b.png" width="500">
@@ -80,6 +98,16 @@ Among the various carbon offset projects described earlier, Gesia Chain is one p
 >
 > This allows carbon offsetting companies to trade in the carbon offsetting market by selling their issued NFTs to carbon offsetting wholesalers. These transactions contribute to the circulation and activation of carbon offsetting rights, and support more effective participation and scale-up in carbon offsetting.
 
+API(provider)<br>
+cert request: (GET) https://test-api.gesiaplatform/v1/cert/certs/{username}
+<br>
+NFV list request: (GET) https://test-api.gesiaplatform/v1/cert/certs/nfv/{id}
+<br>
+NFT publish apply: (POST) https://test-api.gesiaplatform/v1/cert/certs/{username}/nft/minting/{id}
+<br>
+NFT list request: (GET) https://test-api.gesiaplatform/v1/cert/certs/nft/{id}
+<br><br><br>
+
 <p align="center">
   <img src="img/ui/ui_c.png" width="500">
 </p>
@@ -93,6 +121,16 @@ Among the various carbon offset projects described earlier, Gesia Chain is one p
 > Carbon offsetting rights wholesale companies are responsible for purchasing carbon offset rights and distributing them for use in various places. This also helps small businesses and individuals obtain carbon offsetting rights more easily, and contributes to revitalizing the carbon offsetting market and protecting the environment.
 >
 > This distribution structure allows carbon offsetting rights to reach a wider range of users and effectively operate carbon emission compensation systems.
+
+API(provider)<br>
+cert request: (GET) https://test-api.gesiaplatform/v1/cert/certs/{username}
+<br>
+NFV list request: (GET) https://test-api.gesiaplatform/v1/cert/certs/nfv/{id}
+<br>
+NFT list request: (GET) https://test-api.gesiaplatform/v1/cert/certs/nft/{id}
+<br>
+NFT sell apply: (PATCH) https://test-api.gesiaplatform/v1/cert/certs/{username}/register/{id}
+<br><br><br>
 
 <p align="center">
   <img src="img/ui/ui_d.png" width="500">
@@ -111,6 +149,22 @@ Among the various carbon offset projects described earlier, Gesia Chain is one p
 >
 > Thus, carbon offsetting rights retailers offer a variety of carbon offsetting rights to businesses and individuals who need a small amount of carbon offsetting rights, and encourage more participation in carbon offsetting to help achieve carbon neutrality.
 
+API(provider)<br>
+wholesale NFT request: (GET) https://test-api.gesiaplatform/v1/nft/broker/market
+<br>
+wholesale NFT detail history: (GET) https://test-api.gesiaplatform/v1/nft/broker/market/{username}/{id}
+<br>
+wholesale NFT buy: (POST) https://test-api.gesiaplatform/v1/nft/broker/buy/{username}/{id}
+<br>
+wholesale NFT buy history: (GET) https://test-api.gesiaplatform/v1/nft/broker/market/{username}
+<br>
+wholesale NFT buy detail history: (GET) https://test-api.gesiaplatform/v1/nft/broker/market/detail/{username}/{id}
+<br>
+wholesale NFT sell apply: (POST) https://test-api.gesiaplatform/v1/nft/broker/market/sale/{username}
+<br>
+wholesale NFT sell history: (GET) https://test-api.gesiaplatform/v1/nft/broker/market/sale/detail/{username}
+<br><br><br>
+
 <p align="center">
   <img src="img/ui/ui_f.png" width="500">
   <img src="img/ui/ui_g.png" width="500">
@@ -123,6 +177,22 @@ Among the various carbon offset projects described earlier, Gesia Chain is one p
 > For example, companies can buy and use carbon offsets to offset their own carbon emissions, and individuals can buy and use carbon offsets to compensate for carbon emissions from their daily activities.
 >
 > As such, the Gesia Platform wants to leverage blockchain technology to facilitate distribution of carbon offsets to carbon offsetting rights to retail, carbon offsetting companies, or individuals to promote carbon neutrality and environmental protection. This creates a sustainable carbon offset market, giving various stakeholders the opportunity to engage in carbon offset activities and compensate for carbon emissions. Through the safety and transparency of blockchain technology, we want to reliably manage the distribution and transaction of carbon offsets, and to be an effective tool to help companies and individuals realize carbon neutrality.
+
+API(provider)<br>
+retail NFT request: (GET) https://test-api.gesiaplatform/v1/nft/broker/market
+<br>
+retail NFT detail history: (GET) https://test-api.gesiaplatform/v1/nft/broker/market/{username}/{id}
+<br>
+retail NFT buy: (POST) https://test-api.gesiaplatform/v1/nft/broker/buy/{username}/{id}
+<br>
+retail NFT huy history: (GET) https://test-api.gesiaplatform/v1/nft/broker/market/{username}
+<br>
+retail NFT buy detail history: (GET) https://test-api.gesiaplatform/v1/nft/broker/market/detail/{username}/{id}
+<br>
+retail NFT sell apply: (POST) https://test-api.gesiaplatform/v1/nft/broker/market/sale/{username}
+<br>
+retail NFT sell history: (GET) https://test-api.gesiaplatform/v1/nft/broker/market/sale/detail/{username}
+<br><br><br>
 
 <p align="center">
   <img src="img/ui/ui_bb.png" width="500">
