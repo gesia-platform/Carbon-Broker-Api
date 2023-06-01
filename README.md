@@ -12,14 +12,6 @@ Among the various carbon offset projects described earlier, Gesia Chain is one p
 <br>
 <br>
 
-## ERD
-<p align="center">
-  <img src="img/erd/ERD.png" width="300" style="display:inline-block"/>
-  <br>
-  <img src="img/erd/ERD_summary.png" width="300" style="display:inline-block"/>  
-</p>
-<br>
-
 ## process flow
 <p align="center">
   <img src="img/carbon/carbon_1.png" width="200" style="display:inline-block"/>
